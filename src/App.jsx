@@ -1,7 +1,7 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
 import './App.css'
-import Home from './pages/Home';
+import Home from './pages/ApiRickAndMorty';
 import About from './pages/about';
 import { Route, Routes } from "react-router-dom"
 

@@ -7,10 +7,10 @@ export default function Header() {
             <h1>Rick and Morty API</h1>
             <nav>
                 <Link to="/About">
-                    <button type="button">Saiba mais</button>
+                    <button type="button">Home</button>
                 </Link>
                 <Link to="/">
-                    <button type="button">Home</button>
+                    <button type="button">API Rick and Morty</button>
                 </Link>
             </nav>
         </header>
