@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 
 
-function Home() {
+function ApiRickandMorty() {
     const [conteudo, setConteudo] = useState(<>Carregando...</>);
 
 
@@ -56,4 +56,4 @@ function Home() {
 }
 
 
-export default Home;
+export default ApiRickandMorty;

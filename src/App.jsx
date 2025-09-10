@@ -1,9 +1,10 @@
 import Header from './components/Header'
 import Footer from './components/Footer'
 import './App.css'
-import Home from './pages/ApiRickAndMorty';
-import About from './pages/about';
+import ApiRickandMorty from './pages/ApiRickAndMorty';
+import Home from './pages/Home';
 import { Route, Routes } from "react-router-dom"
+
 
 
 function App() {
@@ -11,8 +12,9 @@ function App() {
     <>
       <Header />
       <Routes>
+        <Route path='ApiRickandMorty' element={<ApiRickandMorty />} />
         <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
+        {/* <Route path="/About" element={<About />} /> */}
       </Routes>
       <main>
         {/*filtros */}

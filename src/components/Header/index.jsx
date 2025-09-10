@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom'
 export default function Header() {
     return (
         <header>
-            <h1>Rick and Morty API</h1>
+            <h1>Meu Portifólio</h1>
             <nav>
-                <Link to="/About">
-                    <button type="button">Home</button>
-                </Link>
                 <Link to="/">
-                    <button type="button">API Rick and Morty</button>
+                    <button type="button" className='btn-nav'>Home</button>
+                </Link>
+                <Link to="/ApiRickandMorty">
+                    <button type="button" className='btn-nav'>API Rick and Morty</button>
                 </Link>
             </nav>
         </header>

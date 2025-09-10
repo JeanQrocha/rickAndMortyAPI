@@ -1,9 +1,25 @@
 header {
-    background-color: #90ba12;
-    color: white;
-    padding: 1em;
+    margin: 30px 30px 0 30px;
     display: flex;
-    flex-direction: row;
-    align-items: center; /* Alinhas Verticalmente*/
-    justify-content: center; /* Alinhar Horizontalmente*/
+    background-color: #333333;
+    border-radius: 50px;
+    justify-content: space-around;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    align-items: center;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    display: flex;
+    padding: 12px 50px;
+    color: #F9F9F9;
+    background: linear-gradient(90deg, #02fca4, #09abcf, #8540d4);
+    background-clip: text;
+    color: transparent;
+    animation: glide 4s linear infinite;
+}
+
+nav {
+    display: flex;
 }
