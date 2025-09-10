@@ -1,7 +1,19 @@
-import { Link } from "react-router-dom"
-import "./style.css"
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import "./style.css";
 
 function Home() {
+    const [mostrarTexto, setMostrarTexto] = useState(false);
+
+    useEffect(() => {
+        // Garantir que o texto comece escondido
+        setMostrarTexto(false);
+    }, []);
+
+    const toggleTexto = () => {
+        setMostrarTexto((prev) => !prev);
+    };
+
     return (
         <>
             <main className="div-main">
@@ -12,14 +24,22 @@ function Home() {
                     </h2>
                     <p className="front-end">Desenvolvedor Front-End</p>
 
-                    <button id="btnSobreMim">
-                        Sobre mim <span className="arrow">▼</span>
+                    <button
+                        id="btnSobreMim"
+                        className={mostrarTexto ? "open" : ""}
+                        onClick={toggleTexto}
+                    >
+                        Sobre mim{" "}
+                        <span className="arrow">{mostrarTexto ? "▲" : "▼"}</span>
                     </button>
 
-                    <div id="textoSobreMim" className="hidden">
+                    <div
+                        id="textoSobreMim"
+                        className={mostrarTexto ? "mostrar" : "hidden"}
+                    >
                         <p className="p-me">
                             Tenho 29 anos, atualmente estou estudando HTML, CSS, JAVASCRIPT, REACT no curso Jovem
-                            Programado. Quero me tornar um programador futuramente...
+                            Programador. Quero me tornar um programador futuramente...
                         </p>
 
                         <div className="music-div">
@@ -64,7 +84,12 @@ function Home() {
                     rel="noopener noreferrer"
                     className="contact-btn"
                 >
-                    <img src="./src/img/icone-github-verte.png" alt="GitHub" width="30" height="30" />
+                    <img
+                        src="./src/img/icone-github-verte.png"
+                        alt="GitHub"
+                        width="30"
+                        height="30"
+                    />
                     <span>Github</span>
                 </a>
 
@@ -74,12 +99,17 @@ function Home() {
                     rel="noopener noreferrer"
                     className="contact-btn"
                 >
-                    <img src="./src/img/linkedin.png" alt="LinkedIn" width="30" height="30" />
+                    <img
+                        src="./src/img/linkedin.png"
+                        alt="LinkedIn"
+                        width="30"
+                        height="30"
+                    />
                     <span>LinkedIn</span>
                 </a>
             </section>
         </>
-    )
+    );
 }
 
 export default Home;
